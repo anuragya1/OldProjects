@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="input">
+        <label>Input number</label>
+        <input type="text" id="txtBox"/>
+        <button id="btnGenerate">Generate</button>
+    </div>
+    <div id="numbers">
+        
+    </div>
+    <script>
+         const getvalue=document.getElementById('txtBox');
+         const Generate=document.getElementById('btnGenerate');
+         const number_block=document.getElementById('numbers');
+         
+        Generate.addEventListener('click',function generateElement(){
+            number_block.style.border="5px solid green";
+              console.log(`you clicked Generate button! ${getvalue.value}`);
+              for(i=1;i<=getvalue.value;i++){
+                    const span=document.createElement('span');
+                    span.textContent=`${i}`;
+                    span.style.display="block";
+              
+                    if(i%2===0){
+                        console.log("an odd");
+                        span.style.backgroundColor="cyan";
+                    }
+                else
+                span.style.backgroundColor="magenta";
+                 number_block.appendChild(span);
+              }
+        });
+        
+
+    </script>
+</body>
+</html>

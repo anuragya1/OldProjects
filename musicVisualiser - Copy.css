@@ -1,0 +1,120 @@
+#mainframe {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    margin: 0 auto;
+    overflow-y: hidden;
+    box-shadow: 0 0 0 0 rgba(215, 8, 8, 0.995);
+    transition: all 100ms ease-out;
+    animation: colorfulShadow 4s infinite alternate;
+  }
+  
+  @keyframes colorfulShadow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(215, 8, 8, 0.995);
+    }
+    25% {
+      box-shadow: 10px 10px 10px 10px rgba(211, 14, 14, 0.2);
+    }
+    50% {
+      box-shadow: 20px 20px 20px 20px rgba(8, 215, 8, 0.2);
+    }
+    75% {
+      box-shadow: 30px 30px 30px 30px rgba(8, 8, 215, 0.2);
+    }
+    100% {
+      box-shadow: 40px 40px 40px 40px rgba(215, 215, 8, 0.2);
+    }
+  }
+  
+  
+#random_background_color{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: red;
+     top:100px;
+     
+}
+#random_background_colors{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:50px;
+     
+}
+#random_background_colors3{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:100px;
+     
+}
+#random_background_colors4{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:150px;
+     
+}
+#random_background_colors5{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:200px;
+     
+}
+#random_background_colors6{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:250px;
+     
+}
+#random_background_colors7{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:300px;
+     
+}
+#random_background_colors8{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:350px;
+     
+}
+#random_background_colors9{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:400px;
+     
+}
+#random_background_colors10{
+    position: absolute;
+    height: 400px;
+    width:50px;
+    background-color: rgb(35, 100, 222);
+     top:100px;
+     left:450px;
+     
+}

@@ -1,0 +1,40 @@
+#content{
+    display:flex; 
+    /* justify-content: space-evenly; */
+    background-color:brown;
+    padding:10px 10px 10px 10px;
+   
+}
+#userinput{ 
+    
+    background-color:azure;
+    height:500px;
+    width: 50%;
+    float: left;
+  border: 10px solid red;
+
+}
+#output{
+    background-color:azure;
+    float: right;
+    height:500px;
+    width: 50%;
+    border: 10px solid blue;
+    text-align: center;
+    overflow: scroll;
+}
+#userinput>input{
+   
+ height: 100px; 
+    width: 100%;
+}
+#workdone{
+    background-color:red;
+    height: 10px;
+    width:10px;
+}
+#remove{
+   border-color: red;
+   
+    
+}

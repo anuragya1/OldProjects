@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element generator (generator)</title>
+    <link href="musicVisualiser.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mainframe">
+     <div id="random_background_color"></div>
+     <div id="random_background_colors"></div>
+     <div id="random_background_colors3"></div>
+     <div id="random_background_colors4"></div>
+     <div id="random_background_colors5"></div>
+     <div id="random_background_colors6"></div>
+     <div id="random_background_colors7"></div>
+     <div id="random_background_colors8"></div>
+     <div id="random_background_colors9"></div>
+     <div id="random_background_colors10"></div>
+    </div> 
+    <script>
+        console.log("hello user the script is loaded ");
+        let arr=["pink","yellow","grey","green","blue","purple","violet","orange","indigo","saffron"]
+        let obj=document.getElementById('random_background_color')
+        let obj2=document.getElementById('random_background_colors');
+        let obj3=document.getElementById('random_background_colors3');
+        let obj4=document.getElementById('random_background_colors4');
+        let obj5=document.getElementById('random_background_colors5');
+        let obj6=document.getElementById('random_background_colors6');
+        let obj7=document.getElementById('random_background_colors7');
+        let obj8=document.getElementById('random_background_colors8');
+        let obj9=document.getElementById('random_background_colors9');
+        let obj10=document.getElementById('random_background_colors10');
+      let fillrand_colors=setInterval(function(){
+         obj.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj2.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj3.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj4.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj5.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj6.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj7.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj8.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj9.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+         obj10.style.backgroundColor=`${arr[Math.floor(Math.random()*10)]}`
+      },200);
+     let arr2=[300,400,222,333,444,111,116,121,134,343,292,343];
+     let give_random_height=setInterval(function(){
+        obj.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj2.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj3.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj4.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj5.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj6.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj7.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj8.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj9.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+        obj10.style.top=`${arr2[Math.floor(Math.random()*10)]}px`;
+     },500);
+    </script>
+</body>
+</html>

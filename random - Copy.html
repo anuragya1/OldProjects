@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chessboard Generator</title>
+  <link href="table.css" rel="stylesheet">
+  <center>
+    <h1>CHESSBOARD GENERATOR</h1>
+  </center>
+  <hr>
+  <marquee spellcheck="false">
+    <h2>you can generate a chessboard of order N by providing the value of N</h2>
+  </marquee>
+</head>
+<!-- IIFE=IMMIDIATLY INVOKE FUCNTIN EXPRESSION SYNTAX=(FUNCTION FNAME(A,B))(D,S); -->
+<!-- WHEN ONE FUCTTION IS PASSED INTO NORHTER FUNCTION IS CALLED CALLLBACK FUNCTION -->
+
+<body>
+  <div id="output">
+    <label for="boardSize">Enter the order of the chessboard: </label>
+    <input type="number" id="boardSize" value="8"><br><br>
+    <button id="updateButton">Generate Chessboard</button>
+  </div>
+  <div id="chessboardContainer"></div>
+  <script>
+    function generateChessboard(size) {
+      let chessboardHTML = '';
+      for (let i = 1; i <= size; i++) {
+        for (let j = 1; j <= size; j++) {
+          if ((i + j) % 2 === 0) {
+            chessboardHTML += '<div class="black-square"></div>';
+          } else {
+            chessboardHTML += '<div class="white-square"></div>';
+          }
+        }
+        chessboardHTML += '<br>';
+      }
+      return chessboardHTML;
+    }
+
+    document.getElementById("updateButton").addEventListener("click", function () {
+      const boardSize = parseInt(document.getElementById("boardSize").value);
+      const chessboard = generateChessboard(boardSize);
+      document.getElementById("chessboardContainer").innerHTML = chessboard;
+    });
+  </script>
+  <!-- write a function defined by a range and generates random numbers between it -->
+
+</body>
+
+</html>

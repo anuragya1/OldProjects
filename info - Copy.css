@@ -1,0 +1,71 @@
+ p {
+    background-color: aqua;
+    text-align: center;
+    color: red;
+}
+
+table {
+    background-color: aquamarine;
+
+    margin: 20px;
+    border-spacing: 2px;
+    border-style: dashed;
+    border-color: red;
+    animation-name: lol;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lol {
+    0% {
+        background-color: goldenrod;
+    }
+
+    10% {
+        background-color: grey;
+    }
+
+    20% {
+        background-color: snow;
+    }
+
+    30% {
+        background-color: gold;
+    }
+
+    40% {
+        background-color: greenyellow;
+    }
+
+    50% {
+        background-color: rgb(247, 208, 10);
+
+        box-decoration-break: slice;
+    }
+
+    60% {
+        background-color: cadetblue;
+        text-transform: capitalize;
+        font-style: italic;
+        text-decoration: dotted;
+    }
+
+    70% {
+        text-decoration: rgb(255, 4, 0);
+    }
+
+    80% {
+        visibility: hidden;
+        background-color: black;
+    }
+
+    90% {
+        display: block;
+        background-color: blue;
+    }
+
+    100% {
+        background-size: contain;
+        color: blanchedalmond
+    }
+}

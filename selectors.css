@@ -1,0 +1,48 @@
+h2{
+    background-attachment: fixed;
+    color: purple;
+    color: orange;
+}
+body{
+    background-color: #bdc3c7;
+}
+h1{
+    color: #9b59b6;
+}
+li{
+ color:blue;
+}
+p{
+    background-color: yellow;
+
+}
+input[type="text"]{
+ border: 3px solid red;
+ background-color: grey;
+}
+input[type="password"]{
+ border:3px solid red;
+}
+
+
+.hello{
+ background-color: white;
+}
+#special{
+    border:2px solid blue;
+
+}
+div > p{
+   font-size: 25px;
+
+}
+.rdiv >p{
+   background-color: pink;
+}
+.sec{
+    border:5px solid white;
+}
+.rdiv > em{
+    color:white;
+    font-size: 20px;
+}

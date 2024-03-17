@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="randomObstacles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="mainframe">
+        </div>
+       <div id="random_obstac">
+                
+       </div>
+    </div>
+    <script>
+        let right=465;
+        let arr2=["pink","yellow","grey","green","blue","purple","violet","orange","indigo","saffron"]
+        let arr = [150, 200, 250, 180, 220, 300, 170, 240, 280, 210, 260];
+
+        let obj=document.getElementById('random_obstac');
+       let some= setInterval(function(){
+        console.log("right:", right);
+            if(right<=-35){
+                right=500;
+            
+                   obj.style.top=`${arr[Math.floor(Math.random()*11)]}px`;
+                   obj.style.backgroundColor=`${arr2[Math.floor(Math.random()*11)]}`;
+            }
+            obj.style.marginLeft=`${right-=1.6}px`;n 
+        },1);
+    </script>
+</body>
+</html>

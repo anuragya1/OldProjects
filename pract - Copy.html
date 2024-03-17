@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .user-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub User Information</h1>
+    <div class="user-info" id="userInfo">
+     
+    </div>
+    <input type="text" id="usernameInput" placeholder="Enter GitHub username">
+    <button onclick="fetchUserInfo()">Fetch User Info</button>
+  </div>
+
+  <script>
+    function fetchUserInfo() {
+      const username = document.getElementById('usernameInput').value;
+      const apiUrl = `https://api.github.com/users/${username}`;
+      const userInfoContainer = document.getElementById('userInfo');
+
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+          }
+          return response.json();
+        })
+        .then(userData => {
+          
+          userInfoContainer.innerHTML = '';
+          displayUserInfo(userData);
+        })
+        .catch(error => {
+          console.error('Error fetching GitHub user data:', error);
+        });
+    }
+
+    function displayUserInfo(userData) {
+      const userInfoContainer = document.getElementById('userInfo');
+
+      const avatar = document.createElement('img');
+      avatar.src = userData.avatar_url;
+      avatar.alt = 'GitHub Avatar';
+      avatar.width = 150;
+
+      const name = document.createElement('p');
+      name.textContent = `Name: ${userData.name || 'N/A'}`;
+
+      const bio = document.createElement('p');
+      bio.textContent = `Bio: ${userData.bio || 'N/A'}`;
+
+      const followers = document.createElement('p');
+      followers.textContent = `Followers: ${userData.followers || 0}`;
+
+      const repos = document.createElement('p');
+      repos.textContent = `Public Repositories: ${userData.public_repos || 0}`;
+
+      userInfoContainer.appendChild(avatar);
+      userInfoContainer.appendChild(name);
+      userInfoContainer.appendChild(bio);
+      userInfoContainer.appendChild(followers);
+      userInfoContainer.appendChild(repos);
+    }
+  </script>
+</body>
+</html>

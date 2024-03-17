@@ -1,0 +1,17 @@
+#mainframe{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background-color:red;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#random_obstac{
+    position: absolute;
+    width: 35px;
+    height: 400px;
+    background-color: red;
+    margin-left: 465px;
+   top: 100px;
+}

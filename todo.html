@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link href="todo.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div id="content">
+    
+    <div id="userinput">
+     <input type="text" id="task" placeholder="my tasks are....">
+     <input type="button" id="add" value="add to task">
+    </div>
+    <div id="output" >
+    <h1 style="font-size:200%;">TASK LIST</h1>
+    <p>Add tasks to your list by typing to the left and pressing the "add to task" button <br>You may then view pending tasks below.</p>
+    <hr>
+    </div>
+</div>
+<script>
+    
+    let a=document.getElementById('add');
+    let out=document.getElementById('output');
+    const inp=document.getElementById('task');
+    inp.style.fontSize="300%";
+    function set(){
+       
+    
+       const val=inp.value;
+      
+       const lol= document.createElement('div');
+        const task=document.createElement('p');
+        task.textContent=val;
+    
+        lol.appendChild(task);
+       
+        const workdone=document.createElement('input');      
+        const removes=document.createElement('button');
+        workdone.setAttribute('type','checkbox');
+        removes.setAttribute('id','remove');
+        removes.textContent="remove";
+        lol.appendChild(workdone);
+        lol.appendChild(removes);
+        out.appendChild(lol);
+        removes.addEventListener("click", function(){
+            out.removeChild(lol);
+            alert("task removed successfully");
+        });
+
+        // console.log(lol);
+       
+       inp.value="";
+       inp.setAttribute('placeholder','my tasks are...');
+
+      
+
+    }
+    
+    a.addEventListener("click", set);
+</script>
+</body>
+</html>

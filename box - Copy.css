@@ -1,0 +1,36 @@
+.lol{
+    background-color: rgb(231, 150, 27);
+    width: 900px;
+
+    border:5px solid green;
+    padding: 12px 12px 12px 12px;
+    margin: auto;
+    border-radius: 23px;
+    position: absolute;
+     text-shadow: 2px 2px rgb(239, 11, 239);
+ 
+    margin: 45px 45px 45px 45px;
+}
+.a{
+   
+    background-color: rgb(227, 57, 14);
+    border:5px solid green;
+    padding: 12px 12px 12px 12px;
+    margin:34px 34px 34px 34px;
+    position: relative;
+    
+  
+}
+.b{
+    background-color: rgb(134, 229, 46);
+    border:5px solid green;
+    padding: 12px 12px 12px 12px;
+    margin:34px 34px 34px 34px;
+}
+.c{
+    background-color: rgb(43, 43, 141);
+    border:5px solid green;
+    padding: 12px 12px 12px 12px;
+    margin:34px 34px 34px 34px;
+    
+}

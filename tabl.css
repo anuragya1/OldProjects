@@ -1,0 +1,47 @@
+table{
+    margin: 0 auto;
+    background-color:yellowgreen;
+    
+    
+}
+h4{
+  align-self:center;
+}
+
+tr,th,td{
+    margin: auto;
+    padding: 10px; 
+    text-decoration: solid;
+    font-stretch: expanded;
+
+}
+#eng{
+    color:rgb(98, 22, 164);
+}
+#maths{
+    color:rgb(123, 1, 1);
+}
+#hindi{
+    color:maroon;
+}
+#HIS_CIV{
+    color:coral;
+}
+#chem{
+    color: orchid;
+}
+#bio{
+color: red;
+}
+#geo{
+    color: saddlebrown;
+}
+#eco{
+    color: crimson;
+}
+#phy{
+    color: royalblue;
+}
+body{
+    font-family: ;
+}

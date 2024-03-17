@@ -1,0 +1,29 @@
+#bodyframe{ 
+    position: relative;
+    background-color: aqua;
+ 
+      margin: 0 auto;
+      width: 700px;
+      height: 700px;
+      border: 5px solid black;
+}
+#object{
+     position: absolute;
+     top: 300px;
+     left: 50px;
+    height: 25px;
+    width: 25px;
+    background-color: brown;
+    
+    border: 5px solid red;
+
+}
+#userwish{
+    position: absolute;
+    background-color: chartreuse;
+     border: 5px solid green;
+      bottom: 0px;
+     height: 100px;
+     width: 695px;
+}
+

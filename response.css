@@ -1,0 +1,30 @@
+#first{
+    
+    border-radius: 12px;
+    border:2px solid rgb(61, 11, 197);
+    margin: 25px;
+    padding: 24px;
+       overflow: scroll;
+       width: 34px;
+}
+#second{
+    border-radius: 12px;
+    border:2px solid rgb(229, 160, 11);
+    margin: 25px;
+    padding: 24px;
+    overflow: scroll;
+}
+#third{
+    border-radius: 12px;
+    border:2px solid purple;
+    margin: 25px;
+    padding: 24px;
+    overflow: scroll;
+}
+#fourth{
+    border-radius: 12px;
+    border:2px solid red;
+    margin: 25px;
+    padding: 24px;
+    overflow: scroll;
+}

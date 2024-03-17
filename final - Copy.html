@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="final.css" rel="stylesheet">
+</head>
+<body>
+    <div id="bodyframe">
+        <div id="object"></div>
+       
+        <div id="user_wish">
+            <button id="startbtn">Start</button>
+            <button id="pausebtn">Pause</button>
+            <button id="up">up</button>
+            <button id="down">down</button>
+        </div>
+    </div>
+    <script>
+        const object = document.getElementById("object");
+        const body = document.getElementById("bodyframe");
+        let position = 0;
+        let id;
+        function infinite() {
+            position += 2;
+            if (position > body.clientWidth) {
+                object.style.left = "0px";
+                position = 0;
+            } else {
+                object.style.left = position + "px";
+            }
+        }
+
+        const start = document.getElementById("startbtn");
+        start.addEventListener('click', function () {
+            if(!id)
+             id=setInterval(infinite, 10); 
+        });
+        const pause=document.getElementById("pausebtn");
+       
+        pause.addEventListener('click',function (){
+           
+         clearInterval(id);
+           id=null;
+        });
+        const up=document.getElementById("up");
+        up.addEventListener("click",function(){
+              object.style.top="100px";
+        });
+       
+
+    </script>
+</body>
+</html>

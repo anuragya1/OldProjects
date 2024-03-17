@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMR Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1>BMR Calculator</h1>
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter your weight" required>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter your height" required>
+
+        <button onclick="calculateBMR()">Calculate BMR</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+      function calculateBMR() {
+    const gender = document.getElementById('gender');
+    const age = parseFloat(document.getElementById('age').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+    const height = parseFloat(document.getElementById('height').value);
+
+    if (isNaN(age) || isNaN(weight) || isNaN(height)) {
+        alert('Please enter valid numbers for age, weight, and height.');
+        return;
+    }
+
+    let bmr;
+
+    if (gender.value === 'male') {
+        bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+    } else {
+        bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+    }
+
+    document.getElementById('result').innerText = `Your BMR is: ${bmr.toFixed(2)} calories per day.`;
+}
+
+    </script>
+</body>
+</html>
